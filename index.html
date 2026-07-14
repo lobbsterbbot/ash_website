@@ -343,39 +343,6 @@
     margin-bottom: 0.8rem;
   }
 
-  /* LOGOS */
-  .logos-section {
-    padding: 6vw;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-
-  .logos-section.visible { opacity: 1; transform: none; }
-
-  .logos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 3rem;
-    align-items: center;
-    justify-items: center;
-  }
-
-  .logo-item {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.8;
-    filter: grayscale(100%) brightness(0.8);
-  }
-
-  .logo-item img {
-    max-height: 100%;
-    max-width: 100%;
-    object-fit: contain;
-  }
-
   /* TESTIMONIALS */
   .testimonials-stack {
     display: grid;
@@ -451,20 +418,7 @@
 
   footer a:hover { color: var(--rust); border-color: var(--rust); }
 
-
-
-<section class="logos-section">
-  <p class="section-label">Clients</p>
-  <div class="logos-grid">
-    <div class="logo-item" style="font-weight: bold; color: var(--rust); font-size: 14px;">Expedia</div>
-    <div class="logo-item" style="font-weight: bold; color: var(--rust); font-size: 14px;">Disney</div>
-    <div class="logo-item" style="font-weight: bold; color: var(--rust); font-size: 14px;">TJX</div>
-    <div class="logo-item" style="font-weight: bold; color: var(--rust); font-size: 14px;">Nike</div>
-    <div class="logo-item" style="font-weight: bold; color: var(--rust); font-size: 14px;">Instagram</div>
-    <div class="logo-item" style="font-weight: bold; color: var(--rust); font-size: 14px;">TikTok</div>
-  </div>
-</section>
-
+  @media (max-width: 720px) {
     .bio-block, .consult-block { grid-template-columns: 1fr; gap: 2.5rem; }
     .service-card:not(:last-child) { border-right: none; padding-right: 0; }
     .service-card + .service-card { padding-left: 0; }
