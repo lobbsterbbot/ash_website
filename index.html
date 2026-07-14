@@ -26,7 +26,7 @@
 
   body {
     background: var(--paper);
-    color: white;
+    color: var(--ink);
     font-family: 'Libre Baskerville', serif;
     font-size: 18px;
     line-height: 1.7;
@@ -40,7 +40,7 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--ink);
   }
 
   .wordmark {
@@ -49,7 +49,7 @@
     font-size: 0.78rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: white;
+    color: var(--ink);
     text-decoration: none;
   }
 
@@ -126,7 +126,7 @@
     display: inline-block;
   }
 
-  .btn-primary:hover { background: #7FEFFF; color: white; }
+  .btn-primary:hover { background: #7FEFFF; color: var(--ink); }
 
   .btn-ghost {
     font-family: 'DM Mono', monospace;
@@ -228,7 +228,7 @@
   .bio-left p {
     font-size: 0.95rem;
     line-height: 1.85;
-    color: white;
+    color: var(--ink);
     margin-bottom: 1.2rem;
   }
 
@@ -260,7 +260,7 @@
     font-size: 0.9rem;
     padding: 0.55rem 0;
     border-bottom: 1px solid var(--pale);
-    color: white;
+    color: var(--ink);
     font-family: 'DM Mono', monospace;
     letter-spacing: 0.05em;
   }
@@ -316,7 +316,7 @@
     font-size: 0.92rem;
     padding: 0.6rem 0;
     border-bottom: 1px solid var(--pale);
-    color: white;
+    color: var(--ink);
     display: flex;
     gap: 0.8rem;
   }
@@ -344,7 +344,7 @@
 
   .consult-detail p {
     font-size: 0.9rem;
-    color: white;
+    color: var(--ink);
     margin-bottom: 0.8rem;
   }
 
@@ -364,7 +364,7 @@
     font-size: 0.95rem;
     line-height: 1.75;
     font-style: italic;
-    color: white;
+    color: var(--ink);
     margin-bottom: 1.5rem;
   }
 
@@ -414,7 +414,7 @@
     font-size: 0.72rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: white;
+    color: var(--ink);
     text-decoration: none;
     border-bottom: 1px solid var(--pale);
     padding-bottom: 2px;
@@ -543,17 +543,17 @@
 
       <div style="margin-bottom: 1.5rem;">
         <label style="font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--indigo); display: block; margin-bottom: 0.6rem;">Name</label>
-        <input type="text" name="name" required="" style="width: 100%; background: transparent; border: none; border-bottom: 1px solid white; padding: 0.6rem 0; font-family: 'Libre Baskerville', serif; font-size: 0.95rem; color: white; outline: none;">
+        <input type="text" name="name" required="" style="width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--ink); padding: 0.6rem 0; font-family: 'Libre Baskerville', serif; font-size: 0.95rem; color: var(--ink); outline: none;">
       </div>
 
       <div style="margin-bottom: 1.5rem;">
         <label style="font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--indigo); display: block; margin-bottom: 0.6rem;">Email</label>
-        <input type="email" name="email" required="" style="width: 100%; background: transparent; border: none; border-bottom: 1px solid white; padding: 0.6rem 0; font-family: 'Libre Baskerville', serif; font-size: 0.95rem; color: white; outline: none;">
+        <input type="email" name="email" required="" style="width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--ink); padding: 0.6rem 0; font-family: 'Libre Baskerville', serif; font-size: 0.95rem; color: var(--ink); outline: none;">
       </div>
 
       <div style="margin-bottom: 1.5rem;">
         <label style="font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--indigo); display: block; margin-bottom: 0.6rem;">Message</label>
-        <textarea name="message" required="" rows="5" style="width: 100%; background: transparent; border: none; border-bottom: 1px solid white; padding: 0.6rem 0; font-family: 'Libre Baskerville', serif; font-size: 0.95rem; color: white; outline: none; resize: none;"></textarea>
+        <textarea name="message" required="" rows="5" style="width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--ink); padding: 0.6rem 0; font-family: 'Libre Baskerville', serif; font-size: 0.95rem; color: var(--ink); outline: none; resize: none;"></textarea>
       </div>
 
       <button type="submit" style="font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; background: var(--purple); color: var(--paper); border: none; padding: 0.85rem 2rem; cursor: pointer; transition: background 0.2s;" onmouseover="this.style.background='#7FEFFF'" onmouseout="this.style.background='#7FEFFF'">Send</button>
@@ -566,7 +566,7 @@
 
     <div style="border-top: 1px solid var(--pale); padding-top: 1.5rem;">
       <p style="font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mid);">Or email directly</p>
-      <p style="font-size: 0.95rem; margin-top: 0.5rem;"><a href="mailto:ashley@ashleybraz.com" style="color: white; text-decoration: none; border-bottom: 1px solid var(--pale); padding-bottom: 2px;">ashley@ashleybraz.com</a></p>
+      <p style="font-size: 0.95rem; margin-top: 0.5rem;"><a href="mailto:ashley@ashleybraz.com" style="color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--pale); padding-bottom: 2px;">ashley@ashleybraz.com</a></p>
     </div>
   </div>
 </section>
