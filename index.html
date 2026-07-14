@@ -15,8 +15,7 @@
   :root {
     --ink: #0f0e0d;
     --paper: #f5f2ed;
-    --indigo: #2d1b4e;
-    --purple: #5b4d8f;
+    --rust: #b84b2f;
     --pale: #e8e2d8;
     --mid: #8a8070;
   }
@@ -61,7 +60,7 @@
     transition: color 0.2s;
   }
 
-  nav a:hover { color: var(--indigo); }
+  nav a:hover { color: var(--rust); }
 
   /* HERO */
   .hero {
@@ -77,7 +76,7 @@
     font-size: 0.72rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--indigo);
+    color: var(--rust);
     margin-bottom: 1.8rem;
   }
 
@@ -90,8 +89,8 @@
   }
 
   h1 em {
-    color: #7FEFFF !important;
     font-style: italic;
+    color: var(--rust);
   }
 
   .hero-sub {
@@ -114,7 +113,7 @@
     font-size: 0.75rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    background: var(--purple);
+    background: var(--ink);
     color: var(--paper);
     padding: 0.85rem 2rem;
     text-decoration: none;
@@ -122,7 +121,7 @@
     display: inline-block;
   }
 
-  .btn-primary:hover { background: #7FEFFF; color: var(--ink); }
+  .btn-primary:hover { background: var(--rust); }
 
   .btn-ghost {
     font-family: 'DM Mono', monospace;
@@ -136,7 +135,7 @@
     transition: color 0.2s, border-color 0.2s;
   }
 
-  .btn-ghost:hover { color: var(--indigo); border-color: var(--indigo); }
+  .btn-ghost:hover { color: var(--ink); border-color: var(--ink); }
 
   /* DIVIDER */
   .divider {
@@ -160,7 +159,7 @@
     font-size: 0.68rem;
     letter-spacing: 0.22em;
     text-transform: uppercase;
-    color: var(--indigo);
+    color: var(--rust);
     margin-bottom: 2.5rem;
   }
 
@@ -187,7 +186,7 @@
   .service-number {
     font-family: 'DM Mono', monospace;
     font-size: 0.68rem;
-    color: var(--indigo);
+    color: var(--rust);
     letter-spacing: 0.15em;
     margin-bottom: 1.2rem;
     display: block;
@@ -230,7 +229,7 @@
 
   .bio-left p em {
     font-style: italic;
-    color: var(--indigo);
+    color: var(--mid);
   }
 
   .bio-right {
@@ -242,7 +241,7 @@
     font-size: 0.65rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--indigo);
+    color: var(--rust);
     margin-bottom: 1.2rem;
     display: block;
   }
@@ -271,7 +270,7 @@
     font-size: 0.65rem;
     letter-spacing: 0.2em;
     text-transform: uppercase;
-    color: var(--indigo);
+    color: var(--rust);
     display: block;
     margin-bottom: 1rem;
   }
@@ -319,7 +318,7 @@
 
   .consult-list li::before {
     content: "—";
-    color: var(--indigo);
+    color: var(--rust);
     font-family: 'DM Mono', monospace;
     flex-shrink: 0;
   }
@@ -334,7 +333,7 @@
     font-size: 0.72rem;
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: var(--indigo);
+    color: var(--rust);
     margin-bottom: 1.5rem;
   }
 
@@ -369,7 +368,7 @@
     font-size: 0.68rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--indigo);
+    color: var(--rust);
     font-style: normal;
     display: block;
   }
@@ -417,7 +416,7 @@
     transition: border-color 0.2s, color 0.2s;
   }
 
-  footer a:hover { color: var(--indigo); border-color: var(--indigo); }
+  footer a:hover { color: var(--rust); border-color: var(--rust); }
 
   @media (max-width: 720px) {
     .bio-block, .consult-block { grid-template-columns: 1fr; gap: 2.5rem; }
@@ -538,25 +537,25 @@
       <p style="display:none;"><input name="bot-field"></p>
 
       <div style="margin-bottom: 1.5rem;">
-        <label style="font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--indigo); display: block; margin-bottom: 0.6rem;">Name</label>
+        <label style="font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rust); display: block; margin-bottom: 0.6rem;">Name</label>
         <input type="text" name="name" required="" style="width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--ink); padding: 0.6rem 0; font-family: 'Libre Baskerville', serif; font-size: 0.95rem; color: var(--ink); outline: none;">
       </div>
 
       <div style="margin-bottom: 1.5rem;">
-        <label style="font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--indigo); display: block; margin-bottom: 0.6rem;">Email</label>
+        <label style="font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rust); display: block; margin-bottom: 0.6rem;">Email</label>
         <input type="email" name="email" required="" style="width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--ink); padding: 0.6rem 0; font-family: 'Libre Baskerville', serif; font-size: 0.95rem; color: var(--ink); outline: none;">
       </div>
 
       <div style="margin-bottom: 1.5rem;">
-        <label style="font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--indigo); display: block; margin-bottom: 0.6rem;">Message</label>
+        <label style="font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rust); display: block; margin-bottom: 0.6rem;">Message</label>
         <textarea name="message" required="" rows="5" style="width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--ink); padding: 0.6rem 0; font-family: 'Libre Baskerville', serif; font-size: 0.95rem; color: var(--ink); outline: none; resize: none;"></textarea>
       </div>
 
-      <button type="submit" style="font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; background: var(--purple); color: var(--paper); border: none; padding: 0.85rem 2rem; cursor: pointer; transition: background 0.2s;" onmouseover="this.style.background='#7FEFFF'" onmouseout="this.style.background='#7FEFFF'">Send</button>
+      <button type="submit" style="font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; background: var(--ink); color: var(--paper); border: none; padding: 0.85rem 2rem; cursor: pointer; transition: background 0.2s;" onmouseover="this.style.background='#b84b2f'" onmouseout="this.style.background='#0f0e0d'">Send</button>
     </form>
 
     <div id="form-success" style="display:none; padding: 2rem 0; border-top: 1px solid var(--ink);">
-      <p style="font-family: 'DM Mono', monospace; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--indigo);">Message sent.</p>
+      <p style="font-family: 'DM Mono', monospace; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rust);">Message sent.</p>
       <p style="font-size: 0.92rem; color: var(--mid); margin-top: 0.6rem; font-style: italic;">I'll be in touch soon.</p>
     </div>
 
