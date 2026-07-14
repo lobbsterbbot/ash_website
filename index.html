@@ -15,8 +15,8 @@
   :root {
     --ink: #0f0e0d;
     --paper: #f5f2ed;
-    --indigo: #7FEFFF;
-    --purple: #2d1b4e;
+    --indigo: #4A9FBF;
+    --purple: #5b4d8f;
     --pale: #e8e2d8;
     --mid: #8a8070;
   }
@@ -114,7 +114,7 @@
     font-size: 0.75rem;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    background: var(--indigo);
+    background: var(--purple);
     color: var(--paper);
     padding: 0.85rem 2rem;
     text-decoration: none;
@@ -122,7 +122,7 @@
     display: inline-block;
   }
 
-  .btn-primary:hover { background: var(--purple); }
+  .btn-primary:hover { background: #7FEFFF; color: var(--ink); }
 
   .btn-ghost {
     font-family: 'DM Mono', monospace;
@@ -552,7 +552,7 @@
         <textarea name="message" required="" rows="5" style="width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--ink); padding: 0.6rem 0; font-family: 'Libre Baskerville', serif; font-size: 0.95rem; color: var(--ink); outline: none; resize: none;"></textarea>
       </div>
 
-      <button type="submit" style="font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; background: var(--indigo); color: var(--paper); border: none; padding: 0.85rem 2rem; cursor: pointer; transition: background 0.2s;" onmouseover="this.style.background='#2d1b4e'" onmouseout="this.style.background='#7FEFFF'">Send</button>
+      <button type="submit" style="font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; background: var(--purple); color: var(--paper); border: none; padding: 0.85rem 2rem; cursor: pointer; transition: background 0.2s;" onmouseover="this.style.background='#7FEFFF'" onmouseout="this.style.background='#7FEFFF'">Send</button>
     </form>
 
     <div id="form-success" style="display:none; padding: 2rem 0; border-top: 1px solid var(--ink);">
