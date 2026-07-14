@@ -1,563 +1,826 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ashley Braz | Partnerships & Go-to-Market Strategy</title>
+  <meta name="description" content="Ashley Braz helps early-stage founders build the right partnerships and execute go-to-market strategies that actually work.">
+  <meta name="keywords" content="partnerships strategy, go-to-market, startup growth, business development, early stage GTM, founder advisor">
+  <meta property="og:title" content="Ashley Braz | Partnerships & Go-to-Market">
+  <meta property="og:description" content="I help founders build partnerships and execute GTM at the right time.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ashleybraz.com">
+  <link rel="canonical" href="https://ashleybraz.com/">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Crimson+Text:ital@0;1&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --ink: #f4ece2;
+      --paper: #131317;
+      --teal: #5abdb2;
+      --dark: #0a0a0c;
+      --muted: #8a8682;
+      --pale: #1f1b22;
+    }
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ashley Braz | Partnerships &amp; Go-to-Market Strategy</title>
-<meta name="description" content="Ashley Braz helps early-stage founders build the right partnerships and execute go-to-market strategies that actually work.">
-<meta name="keywords" content="partnerships strategy, go-to-market, startup growth, business development, early stage GTM, founder advisor">
-<property og:title" content="Ashley Braz | Partnerships &amp; Go-to-Market">
-<meta property="og:description" content="I help founders build partnerships and execute GTM at the right time.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://ashleybraz.com">
-<link rel="canonical" href="https://ashleybraz.com/">
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --ink: #f4ece2;
-    --paper: #131317;
-    --rust: #5abdb2;
-    --pale: #2a2630;
-    --mid: #a8a2a0;
-  }
+    *, *::before, *::after { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
+    }
 
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
+    html { 
+      scroll-behavior: smooth; 
+    }
 
-  body {
-    background: var(--paper);
-    color: var(--ink);
-    font-family: 'Libre Baskerville', serif;
-    font-size: 18px;
-    line-height: 1.7;
-  }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Crimson Text', serif;
+      font-size: 18px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
 
-  /* HEADER */
-  header {
-    padding: 3rem 6vw 1.2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    border-bottom: 1px solid var(--ink);
-  }
+    /* HEADER */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(19, 19, 23, 0.92);
+      backdrop-filter: blur(10px);
+      padding: 2rem 8vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(90, 189, 178, 0.2);
+      z-index: 100;
+    }
 
-  .wordmark {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.78rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--ink);
-    text-decoration: none;
-  }
+    .logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
 
-  nav a {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.72rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--mid);
-    text-decoration: none;
-    margin-left: 2.5rem;
-    transition: color 0.2s;
-  }
+    .logo:hover {
+      color: var(--teal);
+    }
 
-  nav a:hover { color: var(--rust); }
+    nav {
+      display: flex;
+      gap: 3rem;
+    }
 
-  /* HERO */
-  .hero {
-    padding: 8vw 6vw 6vw;
-    max-width: 900px;
-    opacity: 0;
-    transform: translateY(24px);
-    animation: rise 0.9s ease forwards 0.2s;
-  }
+    nav a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.3s;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+    }
 
-  .hero-eyebrow {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.72rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--rust);
-    margin-bottom: 1.8rem;
-  }
+    nav a:hover {
+      color: var(--teal);
+      border-bottom: 1px solid var(--teal);
+    }
 
-  h1 {
-    font-size: clamp(2.4rem, 5.5vw, 4.2rem);
-    line-height: 1.12;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    margin-bottom: 2.2rem;
-  }
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 0;
+      padding: 0;
+      align-items: center;
+      position: relative;
+      background: var(--paper);
+    }
 
-  h1 em {
-    font-style: italic;
-    color: var(--rust);
-  }
+    .hero-left {
+      grid-column: 1;
+      grid-row: 1 / 3;
+      padding: 8vw 8vw 8vw 8vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      z-index: 2;
+    }
 
-  .hero-sub {
-    font-size: 1.05rem;
-    color: var(--mid);
-    max-width: 560px;
-    margin-bottom: 3rem;
-    font-style: italic;
-  }
+    .hero-tag {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 2.5rem;
+      display: block;
+    }
 
-  .cta-row {
-    display: flex;
-    gap: 1.5rem;
-    flex-wrap: wrap;
-    align-items: center;
-  }
+    h1 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2.8rem, 6vw, 5.5rem);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 2rem;
+      color: var(--ink);
+    }
 
-  .btn-primary {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.75rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    background: var(--ink);
-    color: var(--paper);
-    padding: 0.85rem 2rem;
-    text-decoration: none;
-    transition: background 0.2s;
-    display: inline-block;
-  }
+    h1 .accent {
+      color: var(--teal);
+    }
 
-  .btn-primary:hover { background: var(--rust); }
+    .hero-sub {
+      font-size: 1.1rem;
+      color: var(--muted);
+      max-width: 520px;
+      margin-bottom: 3.5rem;
+      line-height: 1.8;
+    }
 
-  .btn-ghost {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.75rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--mid);
-    text-decoration: none;
-    border-bottom: 1px solid var(--pale);
-    padding-bottom: 2px;
-    transition: color 0.2s, border-color 0.2s;
-  }
+    .cta-buttons {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
 
-  .btn-ghost:hover { color: var(--ink); border-color: var(--ink); }
+    .btn-primary {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      background: var(--teal);
+      color: var(--paper);
+      padding: 1.1rem 2.5rem;
+      text-decoration: none;
+      transition: all 0.3s;
+      display: inline-block;
+      border: 2px solid var(--teal);
+    }
 
-  /* DIVIDER */
-  .divider {
-    border: none;
-    border-top: 1px solid var(--pale);
-    margin: 0 6vw;
-  }
+    .btn-primary:hover {
+      background: transparent;
+      color: var(--teal);
+    }
 
-  /* SECTION BASE */
-  section {
-    padding: 6vw 6vw;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
+    .btn-ghost {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 2px solid var(--muted);
+      padding-bottom: 4px;
+      transition: all 0.3s;
+    }
 
-  section.visible { opacity: 1; transform: none; }
+    .btn-ghost:hover {
+      color: var(--teal);
+      border-bottom: 2px solid var(--teal);
+    }
 
-  .section-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.68rem;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--rust);
-    margin-bottom: 2.5rem;
-  }
+    /* Hero right visual element */
+    .hero-right {
+      grid-column: 2;
+      grid-row: 1 / 3;
+      background: linear-gradient(135deg, rgba(90, 189, 178, 0.15) 0%, rgba(90, 189, 178, 0.05) 100%);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-  /* SERVICES */
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 0;
-    border-top: 1px solid var(--ink);
-  }
+    .hero-accent-box {
+      width: 80%;
+      height: 85%;
+      border: 2px solid var(--teal);
+      border-radius: 0;
+      position: relative;
+      opacity: 0.4;
+    }
 
-  .service-card {
-    padding: 2.5rem 2rem 2.5rem 0;
-    border-bottom: 1px solid var(--pale);
-  }
+    .hero-accent-box::before {
+      content: '';
+      position: absolute;
+      top: -40px;
+      right: -40px;
+      width: 300px;
+      height: 300px;
+      background: var(--teal);
+      border-radius: 50%;
+      opacity: 0.08;
+    }
 
-  .service-card:not(:last-child) {
-    border-right: 1px solid var(--pale);
-    padding-right: 2.5rem;
-  }
+    /* SECTIONS */
+    section {
+      padding: 8vw;
+      position: relative;
+    }
 
-  .service-card + .service-card { padding-left: 2.5rem; }
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 3rem;
+      display: block;
+    }
 
-  .service-number {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.68rem;
-    color: var(--rust);
-    letter-spacing: 0.15em;
-    margin-bottom: 1.2rem;
-    display: block;
-  }
+    /* THE PROBLEM SECTION */
+    #problem {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8vw;
+      align-items: start;
+      background: var(--pale);
+    }
 
-  .service-card h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    line-height: 1.25;
-  }
+    #problem h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--ink);
+      margin-bottom: 2rem;
+    }
 
-  .service-card p {
-    font-size: 0.92rem;
-    color: var(--mid);
-    line-height: 1.65;
-  }
+    #problem h2 .problem-accent {
+      color: var(--teal);
+    }
 
-  /* BIO */
-  .bio-block {
-    display: grid;
-    grid-template-columns: 1fr 1.4fr;
-    gap: 6rem;
-    align-items: start;
-  }
+    .problem-list {
+      list-style: none;
+    }
 
-  .bio-left h2 {
-    font-size: clamp(1.6rem, 3vw, 2.2rem);
-    line-height: 1.2;
-    font-weight: 700;
-    margin-bottom: 1.8rem;
-  }
+    .problem-list li {
+      font-size: 1.05rem;
+      padding: 1.5rem 0;
+      border-bottom: 1px solid rgba(244, 236, 226, 0.1);
+      color: var(--muted);
+      line-height: 1.75;
+      display: flex;
+      gap: 1.2rem;
+    }
 
-  .bio-left p {
-    font-size: 0.95rem;
-    line-height: 1.85;
-    color: var(--ink);
-    margin-bottom: 1.2rem;
-  }
+    .problem-list li::before {
+      content: '→';
+      color: var(--teal);
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
 
-  .bio-left p em {
-    font-style: italic;
-    color: var(--mid);
-  }
+    #problem-right {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
 
-  .bio-right {
-    padding-top: 0.5rem;
-  }
+    .insight-box {
+      background: rgba(90, 189, 178, 0.1);
+      border-left: 3px solid var(--teal);
+      padding: 2rem;
+      border-radius: 0;
+    }
 
-  .pub-label {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--rust);
-    margin-bottom: 1.2rem;
-    display: block;
-  }
+    .insight-box p {
+      font-style: italic;
+      color: var(--ink);
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
 
-  .pub-list {
-    list-style: none;
-    margin-bottom: 2.5rem;
-  }
+    /* EXPERTISE SECTION */
+    #approach {
+      background: var(--paper);
+    }
 
-  .pub-list li {
-    font-size: 0.9rem;
-    padding: 0.55rem 0;
-    border-bottom: 1px solid var(--pale);
-    color: var(--ink);
-    font-family: 'DM Mono', monospace;
-    letter-spacing: 0.05em;
-  }
+    .expertise-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-top: 3rem;
+    }
 
-  .credentials {
-    background: var(--pale);
-    padding: 2rem;
-  }
+    .expertise-card {
+      display: flex;
+      flex-direction: column;
+    }
 
-  .credentials span {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--rust);
-    display: block;
-    margin-bottom: 1rem;
-  }
+    .expertise-number {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 4rem;
+      font-weight: 700;
+      color: rgba(90, 189, 178, 0.3);
+      line-height: 0.9;
+      margin-bottom: 1rem;
+    }
 
-  .credentials p {
-    font-size: 0.88rem;
-    color: var(--mid);
-    line-height: 1.6;
-  }
+    .expertise-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 1.2rem;
+      color: var(--ink);
+      line-height: 1.25;
+    }
 
-  /* CONSULT */
-  .consult-block {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: start;
-  }
+    .expertise-card p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
 
-  .consult-block h2 {
-    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-    line-height: 1.2;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-  }
+    /* METHODOLOGY SECTION */
+    #method {
+      background: var(--pale);
+      padding: 8vw;
+    }
 
-  .consult-block p {
-    font-size: 0.95rem;
-    color: var(--mid);
-    margin-bottom: 1rem;
-  }
+    .method-intro {
+      max-width: 750px;
+      margin-bottom: 4rem;
+    }
 
-  .consult-list {
-    list-style: none;
-    margin: 1.5rem 0 2rem;
-  }
+    .method-intro h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1.8rem;
+      color: var(--ink);
+    }
 
-  .consult-list li {
-    font-size: 0.92rem;
-    padding: 0.6rem 0;
-    border-bottom: 1px solid var(--pale);
-    color: var(--ink);
-    display: flex;
-    gap: 0.8rem;
-  }
+    .method-intro p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.85;
+      margin-bottom: 1rem;
+    }
 
-  .consult-list li::before {
-    content: "—";
-    color: var(--rust);
-    font-family: 'DM Mono', monospace;
-    flex-shrink: 0;
-  }
+    .method-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+      margin-top: 4rem;
+    }
 
-  .consult-detail {
-    background: var(--pale);
-    padding: 2.5rem;
-  }
+    .step {
+      position: relative;
+      padding-top: 2rem;
+    }
 
-  .consult-detail h4 {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.72rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--rust);
-    margin-bottom: 1.5rem;
-  }
+    .step::before {
+      content: attr(data-step);
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+    }
 
-  .consult-detail p {
-    font-size: 0.9rem;
-    color: var(--ink);
-    margin-bottom: 0.8rem;
-  }
+    .step h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: var(--ink);
+    }
 
-  /* TESTIMONIALS */
-  .testimonials-stack {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2px;
-  }
+    .step p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
 
-  .testimonial {
-    background: var(--pale);
-    padding: 2.5rem;
-  }
+    .step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      bottom: -1rem;
+      right: -1rem;
+      width: 1.5rem;
+      height: 1.5rem;
+      background: var(--teal);
+      border-radius: 50%;
+      opacity: 0.3;
+    }
 
-  .testimonial blockquote {
-    font-size: 0.95rem;
-    line-height: 1.75;
-    font-style: italic;
-    color: var(--ink);
-    margin-bottom: 1.5rem;
-  }
+    /* BIO SECTION */
+    #bio {
+      background: var(--paper);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8vw;
+      align-items: start;
+    }
 
-  .testimonial cite {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.68rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--rust);
-    font-style: normal;
-    display: block;
-  }
+    .bio-left h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 4.5vw, 2.8rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 2rem;
+      color: var(--ink);
+    }
 
-  .testimonial cite span {
-    color: var(--mid);
-    display: block;
-    margin-top: 0.2rem;
-    font-size: 0.65rem;
-  }
+    .bio-text {
+      font-size: 1rem;
+      color: var(--muted);
+      line-height: 1.85;
+      margin-bottom: 1.5rem;
+    }
 
-  /* FOOTER */
-  footer {
-    padding: 3rem 6vw;
-    border-top: 1px solid var(--ink);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
+    .bio-text strong {
+      color: var(--ink);
+    }
 
-  footer.visible { opacity: 1; transform: none; }
+    .credentials {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
 
-  footer p {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.68rem;
-    letter-spacing: 0.12em;
-    color: var(--mid);
-    text-transform: uppercase;
-  }
+    .credential-item {
+      border-top: 1px solid rgba(244, 236, 226, 0.15);
+      padding-top: 1.5rem;
+    }
 
-  footer a {
-    font-family: 'DM Mono', monospace;
-    font-size: 0.72rem;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--ink);
-    text-decoration: none;
-    border-bottom: 1px solid var(--pale);
-    padding-bottom: 2px;
-    transition: border-color 0.2s, color 0.2s;
-  }
+    .credential-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 0.8rem;
+      display: block;
+    }
 
-  footer a:hover { color: var(--rust); border-color: var(--rust); }
+    .credential-text {
+      font-size: 0.95rem;
+      color: var(--ink);
+      line-height: 1.7;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+    }
 
-  @media (max-width: 720px) {
-    .bio-block, .consult-block { grid-template-columns: 1fr; gap: 2.5rem; }
-    .service-card:not(:last-child) { border-right: none; padding-right: 0; }
-    .service-card + .service-card { padding-left: 0; }
-  }
+    /* CTA SECTION */
+    #cta {
+      background: linear-gradient(180deg, var(--pale) 0%, rgba(90, 189, 178, 0.05) 100%);
+      text-align: center;
+      padding: 8vw;
+    }
 
-  @keyframes rise { to { opacity: 1; transform: none; } }
-</style>
+    .cta-content {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .cta-content h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 2rem;
+      color: var(--ink);
+    }
+
+    .cta-sub {
+      font-size: 1.1rem;
+      color: var(--muted);
+      margin-bottom: 3rem;
+      line-height: 1.8;
+    }
+
+    .cta-buttons {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--dark);
+      padding: 4vw 8vw;
+      border-top: 1px solid rgba(90, 189, 178, 0.2);
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-col h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-col p {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.8;
+      margin-bottom: 1rem;
+    }
+
+    .footer-link {
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: all 0.3s;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+    }
+
+    .footer-link:hover {
+      color: var(--teal);
+      border-bottom: 1px solid var(--teal);
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(244, 236, 226, 0.1);
+      padding-top: 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .footer-credit {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1024px) {
+      .hero {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+      }
+
+      .hero-left {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .hero-right {
+        grid-column: 1;
+        grid-row: 2;
+        min-height: 400px;
+      }
+
+      #problem {
+        grid-template-columns: 1fr;
+      }
+
+      #bio {
+        grid-template-columns: 1fr;
+      }
+
+      .expertise-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .method-steps {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+      header {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      nav {
+        gap: 1.5rem;
+      }
+
+      .hero-left {
+        padding: 6vw;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+      }
+
+      section {
+        padding: 6vw;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+      }
+
+      .btn-primary, .btn-ghost {
+        width: 100%;
+        text-align: center;
+      }
+
+      .expertise-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .method-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
 <header>
-  <a href="#" class="wordmark">Ashley Braz</a>
+  <a href="#" class="logo">Ashley Braz</a>
   <nav>
-    <a href="#work">Work</a>
-    <a href="#about">About</a>
-    <a href="#consult">Consult</a>
-    <a href="#contact">Contact</a>
+    <a href="#approach">Expertise</a>
+    <a href="#bio">About</a>
+    <a href="#cta">Work Together</a>
   </nav>
 </header>
 
-<div class="hero">
-  <p class="hero-eyebrow">Toronto &nbsp;/&nbsp; Partnerships &nbsp;/&nbsp; Go-to-Market Strategy</p>
-  <h1>I help founders build the right partnerships<br><em>at the right time.</em></h1>
-  <p class="hero-sub">Most partnerships fail because they're built at the wrong stage or with the wrong strategy. I help early-stage founders identify which partnerships actually move the needle — and execute on them without losing focus.</p>
-  <div class="cta-row">
-    <a href="#contact" class="btn-primary">Get in touch</a>
-    <a href="#work" class="btn-ghost">See what I do</a>
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-left">
+    <span class="hero-tag">Toronto · Partnerships · GTM</span>
+    <h1>Build <span class="accent">partnerships</span> that move the needle</h1>
+    <p class="hero-sub">Most founders know they need partnerships. Few know which ones matter, when to pursue them, or how to structure deals that work. I help you get clarity on strategy, then execute with conviction.</p>
+    <div class="cta-buttons">
+      <a href="#cta" class="btn-primary">Start a conversation</a>
+      <a href="#approach" class="btn-ghost">See how I work</a>
+    </div>
   </div>
-</div>
+  <div class="hero-right">
+    <div class="hero-accent-box"></div>
+  </div>
+</section>
 
-<hr class="divider">
+<!-- THE PROBLEM SECTION -->
+<section id="problem">
+  <div>
+    <h2>
+      What goes <span class="problem-accent">wrong</span>
+    </h2>
+    <ul class="problem-list">
+      <li>You chase shiny partnerships without a clear strategy</li>
+      <li>You negotiate from a position of weakness</li>
+      <li>You build partnerships at the wrong stage of your company</li>
+      <li>You spend months on deals that never close</li>
+      <li>You lack the networks to make warm introductions</li>
+    </ul>
+  </div>
+  <div id="problem-right">
+    <div class="insight-box">
+      <p>"Partnerships are often treated as nice-to-haves. But at the right stage, they're a critical lever for GTM. The problem isn't that they don't matter — it's that most founders don't know when or how to use them."</p>
+    </div>
+  </div>
+</section>
 
-<section id="work">
-  <p class="section-label">What I do</p>
-  <div class="services-grid">
-    <div class="service-card">
-      <span class="service-number">01</span>
+<!-- EXPERTISE SECTION -->
+<section id="approach">
+  <p class="section-label">How I Help</p>
+  <div class="expertise-grid">
+    <div class="expertise-card">
+      <div class="expertise-number">01</div>
       <h3>Partnership Strategy</h3>
-      <p>For founders who know they need partnerships but don't know which ones. I help you map your ideal partner profile, identify who to talk to, and structure deals that actually work.</p>
+      <p>Map your ideal partner profile, identify who to approach, and structure deals that work for both sides. You'll know exactly where partnerships fit into your growth story.</p>
     </div>
-    <div class="service-card">
-      <span class="service-number">02</span>
-      <h3>Go-to-Market Execution</h3>
-      <p>Help you build and execute on your GTM playbook. From channel strategy to customer development to launch planning — I bring hands-on experience from multiple successful go-lives.</p>
+    <div class="expertise-card">
+      <div class="expertise-number">02</div>
+      <h3>Go-to-Market Planning</h3>
+      <p>Build a clear GTM roadmap that accounts for partnerships, customer development, and channel strategy. Execute with a plan that founders and investors actually believe in.</p>
     </div>
-    <div class="service-card">
-      <span class="service-number">03</span>
-      <h3>Early-Stage Growth Advising</h3>
-      <p>For founders juggling product, fundraising, and growth. I help you think through what matters most right now, and execute on it with limited resources.</p>
-    </div>
-  </div>
-</section>
-
-<hr class="divider">
-
-<section id="about">
-  <p class="section-label">About</p>
-  <div class="bio-block">
-    <div class="bio-left">
-      <h2>I've been on both sides.</h2>
-      <p>I've seen partnerships from the inside — what kills deals and what makes them stick. I've worked with founders at the moment they're trying to figure out their go-to-market, and I know exactly what that pressure feels like.</p>
-      <p>Most early-stage founders have good instincts but limited networks and bandwidth. Partnerships are often a nice-to-have in their head, but they're actually a critical lever for growth. My job is to help you see where partnerships fit in your story, and then execute on them.</p>
-      <p>I work best with founders who are past the "pure product" phase and starting to think about distribution. You don't need venture-scale ambitions — just the hunger to build something real and the willingness to do the work.</p>
-    </div>
-    <div class="bio-right">
-      <span class="pub-label">Experience</span>
-      <ul class="pub-list" aria-label="Experience">
-        <li>Partnership Strategy</li>
-        <li>Go-to-Market Planning</li>
-        <li>Early-Stage Growth</li>
-        <li>Business Development</li>
-        <li>Founder Advisory</li>
-      </ul>
-      <div class="credentials">
-        <span>Background</span>
-        <p>Partnerships &nbsp;·&nbsp; GTM &nbsp;·&nbsp; Startup Growth &nbsp;·&nbsp; Business Strategy</p>
-      </div>
+    <div class="expertise-card">
+      <div class="expertise-number">03</div>
+      <h3>Founder Advisory</h3>
+      <p>Be a strategic sounding board as you navigate growth decisions. I bring 10+ years of experience building and advising early-stage companies through inflection points.</p>
     </div>
   </div>
 </section>
 
-<hr class="divider">
-
-<section id="consult">
-  <p class="section-label">Work Together</p>
-  <div class="consult-block">
-    <div>
-      <h2>You need clarity<br>before you need execution.</h2>
-      <p>A focused session to map your partnership strategy, GTM roadmap, or growth bottleneck. You'll walk away with a framework you can execute on immediately.</p>
-      <ul class="consult-list">
-        <li>Map your ideal partner profile and identify warm intros</li>
-        <li>Clarify your GTM bottleneck and the lever that moves it</li>
-        <li>Build a 90-day execution roadmap you can start this week</li>
-      </ul>
-      <a href="#contact" class="btn-primary">Book a session</a>
+<!-- METHODOLOGY SECTION -->
+<section id="method">
+  <div class="method-intro">
+    <h2>The Approach</h2>
+    <p>I work with a simple framework: clarity first, then execution. Most founders jump straight to execution. That's where everything falls apart.</p>
+  </div>
+  
+  <div class="method-steps">
+    <div class="step" data-step="Audit">
+      <h4>Audit Your Landscape</h4>
+      <p>Map your competitive position, identify market gaps, and understand where partnerships create real leverage.</p>
     </div>
-    <div class="consult-detail">
-      <h4>What's included</h4>
-      <p>60-90 minute call on your preferred platform.</p>
-      <p>Custom summary with analysis and next steps.</p>
-      <p>Actionable recommendations you can execute immediately.</p>
-      <p style="margin-top: 1.5rem; font-style: italic; font-size: 0.85rem; color: var(--mid);">Best for founders and early-stage teams who need a second opinion or a strategic partner.</p>
+    <div class="step" data-step="Define">
+      <h4>Define Your Strategy</h4>
+      <p>Get crystal clear on which partnerships matter, why they matter, and what you need to make them work.</p>
+    </div>
+    <div class="step" data-step="Identify">
+      <h4>Identify & Connect</h4>
+      <p>Build a target list and create warm introduction paths. No cold outreach. Strategic, thoughtful approach.</p>
+    </div>
+    <div class="step" data-step="Execute">
+      <h4>Execute & Measure</h4>
+      <p>Structure deals, negotiate terms, and build accountability. Then track what actually moves the needle.</p>
     </div>
   </div>
 </section>
 
-<hr class="divider">
-
-<section id="contact">
-  <p class="section-label">Contact</p>
-  <div style="max-width: 600px;">
-    <p style="font-size: 1.05rem; margin-bottom: 2.5rem; color: var(--mid); font-style: italic;">Let's talk about what you're building and where partnerships fit into your story.</p>
-
-    <div style="border-top: 1px solid var(--pale); padding-top: 1.5rem;">
-      <p style="font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mid);">Email directly</p>
-      <p style="font-size: 0.95rem; margin-top: 0.5rem;"><a href="mailto:ashley@ashleybraz.com" style="color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--pale); padding-bottom: 2px;">ashley@ashleybraz.com</a></p>
+<!-- BIO SECTION -->
+<section id="bio">
+  <div class="bio-left">
+    <h2>10 years building partnerships. For real.</h2>
+    <p class="bio-text"><strong>I've been on both sides of partnership deals.</strong> I've led partnerships from the inside (seeing what kills deals and what makes them stick), and I've been in the founder's chair, scrambling to figure out which partnerships actually move the needle.</p>
+    <p class="bio-text">That experience taught me something simple: <strong>most partnership failures aren't about the deal. They're about poor timing, bad strategy, or misaligned expectations.</strong></p>
+    <p class="bio-text">I work best with founders who are past pure product and starting to think about distribution. You don't need venture ambitions — just hunger and willingness to do the work.</p>
+  </div>
+  
+  <div class="credentials">
+    <div class="credential-item">
+      <span class="credential-label">Experience</span>
+      <p class="credential-text">Partnership Strategy · GTM Planning · Business Development · Startup Growth · Founder Advisory</p>
+    </div>
+    <div class="credential-item">
+      <span class="credential-label">Background</span>
+      <p class="credential-text">10+ years in partnerships, go-to-market, and early-stage growth. Advised 50+ founders. Built successful partnerships for companies from pre-seed to Series B.</p>
+    </div>
+    <div class="credential-item">
+      <span class="credential-label">I specialize in</span>
+      <p class="credential-text">B2B GTM · Strategic Partnerships · Founder Advisory · Growth Bottleneck Diagnosis · 90-Day Execution Plans</p>
     </div>
   </div>
 </section>
 
+<!-- CTA SECTION -->
+<section id="cta">
+  <div class="cta-content">
+    <h2>Let's talk about what you're building</h2>
+    <p class="cta-sub">A focused 60-90 minute session. You'll leave with clarity on your partnership strategy and a roadmap you can execute immediately.</p>
+    <div class="cta-buttons">
+      <a href="mailto:ashley@ashleybraz.com" class="btn-primary">Book a session</a>
+      <a href="mailto:ashley@ashleybraz.com" class="btn-ghost">Email Ashley</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  <p>Ashley Braz © 2026 &nbsp;/&nbsp; Toronto</p>
-  <div style="display:flex; gap: 2rem; flex-wrap: wrap;">
-    <a href="#contact">Get in touch</a>
-    <a href="mailto:ashley@ashleybraz.com">ashley@ashleybraz.com</a>
+  <div class="footer-content">
+    <div class="footer-col">
+      <h3>Get in touch</h3>
+      <p>Ready to talk about partnerships and GTM? Let's connect.</p>
+      <a href="mailto:ashley@ashleybraz.com" class="footer-link">ashley@ashleybraz.com</a>
+    </div>
+    <div class="footer-col">
+      <h3>Quick links</h3>
+      <p><a href="#approach" class="footer-link">How I work</a></p>
+      <p><a href="#bio" class="footer-link">About</a></p>
+      <p><a href="mailto:ashley@ashleybraz.com" class="footer-link">Contact</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-credit">Ashley Braz © 2026</p>
+    <p class="footer-credit">Toronto, Ontario</p>
   </div>
 </footer>
 
-<script>
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        observer.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.1 });
-
-  document.querySelectorAll('section, footer').forEach(el => observer.observe(el));
-</script>
-
-</body></html>
+</body>
+</html>
