@@ -343,6 +343,38 @@
     margin-bottom: 0.8rem;
   }
 
+  /* LOGOS */
+  .logos-section {
+    padding: 6vw;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .logos-section.visible { opacity: 1; transform: none; }
+
+  .logos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 3rem;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .logo-item {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: brightness(0) saturate(100%) invert(1) sepia(1) saturate(0.5) hue-rotate(100deg);
+  }
+
+  .logo-item img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+  }
+
   /* TESTIMONIALS */
   .testimonials-stack {
     display: grid;
@@ -417,6 +449,19 @@
   }
 
   footer a:hover { color: var(--rust); border-color: var(--rust); }
+
+
+<section class="logos-section">
+  <p class="section-label">Clients</p>
+  <div class="logos-grid">
+    <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Expedia_logo.svg/1200px-Expedia_logo.svg.png" alt="Expedia"></div>
+    <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Disney_logo.svg/1200px-Disney_logo.svg.png" alt="Disney"></div>
+    <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/TJX_Companies_logo.svg/1200px-TJX_Companies_logo.svg.png" alt="TJX"></div>
+    <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Nike_Shoe_Company_Logo.svg/1200px-Nike_Shoe_Company_Logo.svg.png" alt="Nike"></div>
+    <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo.svg/1200px-Instagram_logo.svg.png" alt="Instagram"></div>
+    <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/TikTok_logo.svg/1200px-TikTok_logo.svg.png" alt="TikTok"></div>
+  </div>
+</section>
 
   @media (max-width: 720px) {
     .bio-block, .consult-block { grid-template-columns: 1fr; gap: 2.5rem; }
