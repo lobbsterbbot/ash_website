@@ -13,11 +13,11 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
 <style>
   :root {
-    --ink: #0f0e0d;
-    --paper: #f5f2ed;
-    --rust: #2d5a3d;
-    --pale: #e8e2d8;
-    --mid: #8a8070;
+    --ink: #f4ece2;
+    --paper: #131317;
+    --rust: #5abdb2;
+    --pale: #2a2630;
+    --mid: #a8a2a0;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -532,35 +532,8 @@
   <div style="max-width: 600px;">
     <p style="font-size: 1.05rem; margin-bottom: 2.5rem; color: var(--mid); font-style: italic;">Let's talk about what you're building and where partnerships fit into your story.</p>
 
-    <form id="contact-form" name="contact" method="POST" netlify netlify-honeypot="bot-field" style="margin-bottom: 2.5rem;">
-      <input type="hidden" name="form-name" value="contact">
-      <p style="display:none;"><input name="bot-field"></p>
-
-      <div style="margin-bottom: 1.5rem;">
-        <label style="font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rust); display: block; margin-bottom: 0.6rem;">Name</label>
-        <input type="text" name="name" required="" style="width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--ink); padding: 0.6rem 0; font-family: 'Libre Baskerville', serif; font-size: 0.95rem; color: var(--ink); outline: none;">
-      </div>
-
-      <div style="margin-bottom: 1.5rem;">
-        <label style="font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rust); display: block; margin-bottom: 0.6rem;">Email</label>
-        <input type="email" name="email" required="" style="width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--ink); padding: 0.6rem 0; font-family: 'Libre Baskerville', serif; font-size: 0.95rem; color: var(--ink); outline: none;">
-      </div>
-
-      <div style="margin-bottom: 1.5rem;">
-        <label style="font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rust); display: block; margin-bottom: 0.6rem;">Message</label>
-        <textarea name="message" required="" rows="5" style="width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--ink); padding: 0.6rem 0; font-family: 'Libre Baskerville', serif; font-size: 0.95rem; color: var(--ink); outline: none; resize: none;"></textarea>
-      </div>
-
-      <button type="submit" style="font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; background: var(--ink); color: var(--paper); border: none; padding: 0.85rem 2rem; cursor: pointer; transition: background 0.2s;" onmouseover="this.style.background='#2d5a3d'" onmouseout="this.style.background='#0f0e0d'">Send</button>
-    </form>
-
-    <div id="form-success" style="display:none; padding: 2rem 0; border-top: 1px solid var(--ink);">
-      <p style="font-family: 'DM Mono', monospace; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rust);">Message sent.</p>
-      <p style="font-size: 0.92rem; color: var(--mid); margin-top: 0.6rem; font-style: italic;">I'll be in touch soon.</p>
-    </div>
-
     <div style="border-top: 1px solid var(--pale); padding-top: 1.5rem;">
-      <p style="font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mid);">Or email directly</p>
+      <p style="font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mid);">Email directly</p>
       <p style="font-size: 0.95rem; margin-top: 0.5rem;"><a href="mailto:ashley@ashleybraz.com" style="color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--pale); padding-bottom: 2px;">ashley@ashleybraz.com</a></p>
     </div>
   </div>
@@ -585,21 +558,6 @@
   }, { threshold: 0.1 });
 
   document.querySelectorAll('section, footer').forEach(el => observer.observe(el));
-
-  const form = document.getElementById('contact-form');
-  if (form) {
-    form.addEventListener('submit', async function(e) {
-      e.preventDefault();
-      const data = new FormData(form);
-      try {
-        await fetch('/', { method: 'POST', body: data });
-        form.style.display = 'none';
-        document.getElementById('form-success').style.display = 'block';
-      } catch(err) {
-        alert('Something went wrong. Please try again.');
-      }
-    });
-  }
 </script>
 
 </body></html>
