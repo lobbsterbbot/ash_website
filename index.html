@@ -344,35 +344,6 @@
   }
 
   /* LOGOS */
-  .logos-section {
-    padding: 6vw;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
-  }
-
-  .logos-section.visible { opacity: 1; transform: none; }
-
-  .logos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 3rem;
-    align-items: center;
-    justify-items: center;
-  }
-
-  .logo-item {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0.8;
-    filter: grayscale(100%) brightness(0.8);
-  }
-
-  .logo-item img {
-    max-height: 100%;
-    max-width: 100%;
     object-fit: contain;
   }
 
@@ -447,6 +418,21 @@
     border-bottom: 1px solid var(--pale);
     padding-bottom: 2px;
     transition: border-color 0.2s, color 0.2s;
+
+<hr class="divider">
+
+<section>
+  <p class="section-label">Clients</p>
+  <div style="display: grid; grid-template-columns: repeat(6, 1fr); gap: 2rem; align-items: center;">
+    <img src="https://www.expedia.ca/etc.clientlibs/expedia-common/clientlibs/images/logos/expedia-logo.svg" alt="Expedia" style="max-height: 50px;">
+    <img src="https://www.disneyplus.com/branding/static/images/disney-logo.svg" alt="Disney" style="max-height: 50px;">
+    <img src="https://www.tjx.com/favicon.ico" alt="TJX" style="max-height: 50px;">
+    <img src="https://www.nike.com/favicon.ico" alt="Nike" style="max-height: 50px;">
+    <img src="https://www.instagram.com/favicon.ico" alt="Instagram" style="max-height: 50px;">
+    <img src="https://www.tiktok.com/favicon.ico" alt="TikTok" style="max-height: 50px;">
+  </div>
+</section>
+
   }
 
   footer a:hover { color: var(--rust); border-color: var(--rust); }
