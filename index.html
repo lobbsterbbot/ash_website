@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashley Braz | Partnerships &amp; Go-to-Market Strategy</title>
+<meta name="description" content="Ashley Braz helps early-stage founders build the right partnerships and execute go-to-market strategies that actually work.">
+<meta name="keywords" content="partnerships strategy, go-to-market, startup growth, business development, early stage GTM, founder advisor">
+<property og:title" content="Ashley Braz | Partnerships &amp; Go-to-Market">
+<meta property="og:description" content="I help founders build partnerships and execute GTM at the right time.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ashleybraz.com">
+<link rel="canonical" href="https://ashleybraz.com/">
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #0f0e0d;
+    --paper: #f5f2ed;
+    --rust: #b84b2f;
+    --pale: #e8e2d8;
+    --mid: #8a8070;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Libre Baskerville', serif;
+    font-size: 18px;
+    line-height: 1.7;
+  }
+
+  /* HEADER */
+  header {
+    padding: 3rem 6vw 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .wordmark {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  nav a {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--mid);
+    text-decoration: none;
+    margin-left: 2.5rem;
+    transition: color 0.2s;
+  }
+
+  nav a:hover { color: var(--rust); }
+
+  /* HERO */
+  .hero {
+    padding: 8vw 6vw 6vw;
+    max-width: 900px;
+    opacity: 0;
+    transform: translateY(24px);
+    animation: rise 0.9s ease forwards 0.2s;
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 1.8rem;
+  }
+
+  h1 {
+    font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+    line-height: 1.12;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 2.2rem;
+  }
+
+  h1 em {
+    font-style: italic;
+    color: var(--rust);
+  }
+
+  .hero-sub {
+    font-size: 1.05rem;
+    color: var(--mid);
+    max-width: 560px;
+    margin-bottom: 3rem;
+    font-style: italic;
+  }
+
+  .cta-row {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .btn-primary {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 0.85rem 2rem;
+    text-decoration: none;
+    transition: background 0.2s;
+    display: inline-block;
+  }
+
+  .btn-primary:hover { background: var(--rust); }
+
+  .btn-ghost {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--mid);
+    text-decoration: none;
+    border-bottom: 1px solid var(--pale);
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .btn-ghost:hover { color: var(--ink); border-color: var(--ink); }
+
+  /* DIVIDER */
+  .divider {
+    border: none;
+    border-top: 1px solid var(--pale);
+    margin: 0 6vw;
+  }
+
+  /* SECTION BASE */
+  section {
+    padding: 6vw 6vw;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  section.visible { opacity: 1; transform: none; }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 2.5rem;
+  }
+
+  /* SERVICES */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 0;
+    border-top: 1px solid var(--ink);
+  }
+
+  .service-card {
+    padding: 2.5rem 2rem 2.5rem 0;
+    border-bottom: 1px solid var(--pale);
+  }
+
+  .service-card:not(:last-child) {
+    border-right: 1px solid var(--pale);
+    padding-right: 2.5rem;
+  }
+
+  .service-card + .service-card { padding-left: 2.5rem; }
+
+  .service-number {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--rust);
+    letter-spacing: 0.15em;
+    margin-bottom: 1.2rem;
+    display: block;
+  }
+
+  .service-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.25;
+  }
+
+  .service-card p {
+    font-size: 0.92rem;
+    color: var(--mid);
+    line-height: 1.65;
+  }
+
+  /* BIO */
+  .bio-block {
+    display: grid;
+    grid-template-columns: 1fr 1.4fr;
+    gap: 6rem;
+    align-items: start;
+  }
+
+  .bio-left h2 {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 1.8rem;
+  }
+
+  .bio-left p {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: var(--ink);
+    margin-bottom: 1.2rem;
+  }
+
+  .bio-left p em {
+    font-style: italic;
+    color: var(--mid);
+  }
+
+  .bio-right {
+    padding-top: 0.5rem;
+  }
+
+  .pub-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 1.2rem;
+    display: block;
+  }
+
+  .pub-list {
+    list-style: none;
+    margin-bottom: 2.5rem;
+  }
+
+  .pub-list li {
+    font-size: 0.9rem;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid var(--pale);
+    color: var(--ink);
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.05em;
+  }
+
+  .credentials {
+    background: var(--pale);
+    padding: 2rem;
+  }
+
+  .credentials span {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--rust);
+    display: block;
+    margin-bottom: 1rem;
+  }
+
+  .credentials p {
+    font-size: 0.88rem;
+    color: var(--mid);
+    line-height: 1.6;
+  }
+
+  /* CONSULT */
+  .consult-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .consult-block h2 {
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    line-height: 1.2;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+
+  .consult-block p {
+    font-size: 0.95rem;
+    color: var(--mid);
+    margin-bottom: 1rem;
+  }
+
+  .consult-list {
+    list-style: none;
+    margin: 1.5rem 0 2rem;
+  }
+
+  .consult-list li {
+    font-size: 0.92rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--pale);
+    color: var(--ink);
+    display: flex;
+    gap: 0.8rem;
+  }
+
+  .consult-list li::before {
+    content: "—";
+    color: var(--rust);
+    font-family: 'DM Mono', monospace;
+    flex-shrink: 0;
+  }
+
+  .consult-detail {
+    background: var(--pale);
+    padding: 2.5rem;
+  }
+
+  .consult-detail h4 {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--rust);
+    margin-bottom: 1.5rem;
+  }
+
+  .consult-detail p {
+    font-size: 0.9rem;
+    color: var(--ink);
+    margin-bottom: 0.8rem;
+  }
+
+  /* TESTIMONIALS */
+  .testimonials-stack {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2px;
+  }
+
+  .testimonial {
+    background: var(--pale);
+    padding: 2.5rem;
+  }
+
+  .testimonial blockquote {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    font-style: italic;
+    color: var(--ink);
+    margin-bottom: 1.5rem;
+  }
+
+  .testimonial cite {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--rust);
+    font-style: normal;
+    display: block;
+  }
+
+  .testimonial cite span {
+    color: var(--mid);
+    display: block;
+    margin-top: 0.2rem;
+    font-size: 0.65rem;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 3rem 6vw;
+    border-top: 1px solid var(--ink);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  footer.visible { opacity: 1; transform: none; }
+
+  footer p {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.12em;
+    color: var(--mid);
+    text-transform: uppercase;
+  }
+
+  footer a {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-decoration: none;
+    border-bottom: 1px solid var(--pale);
+    padding-bottom: 2px;
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  footer a:hover { color: var(--rust); border-color: var(--rust); }
+
+  @media (max-width: 720px) {
+    .bio-block, .consult-block { grid-template-columns: 1fr; gap: 2.5rem; }
+    .service-card:not(:last-child) { border-right: none; padding-right: 0; }
+    .service-card + .service-card { padding-left: 0; }
+  }
+
+  @keyframes rise { to { opacity: 1; transform: none; } }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="#" class="wordmark">Ashley Braz</a>
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#about">About</a>
+    <a href="#consult">Consult</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <p class="hero-eyebrow">Toronto &nbsp;/&nbsp; Partnerships &nbsp;/&nbsp; Go-to-Market Strategy</p>
+  <h1>I help founders build the right partnerships<br><em>at the right time.</em></h1>
+  <p class="hero-sub">Most partnerships fail because they're built at the wrong stage or with the wrong strategy. I help early-stage founders identify which partnerships actually move the needle — and execute on them without losing focus.</p>
+  <div class="cta-row">
+    <a href="#contact" class="btn-primary">Get in touch</a>
+    <a href="#work" class="btn-ghost">See what I do</a>
+  </div>
+</div>
+
+<hr class="divider">
+
+<section id="work">
+  <p class="section-label">What I do</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <span class="service-number">01</span>
+      <h3>Partnership Strategy</h3>
+      <p>For founders who know they need partnerships but don't know which ones. I help you map your ideal partner profile, identify who to talk to, and structure deals that actually work.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-number">02</span>
+      <h3>Go-to-Market Execution</h3>
+      <p>Help you build and execute on your GTM playbook. From channel strategy to customer development to launch planning — I bring hands-on experience from multiple successful go-lives.</p>
+    </div>
+    <div class="service-card">
+      <span class="service-number">03</span>
+      <h3>Early-Stage Growth Advising</h3>
+      <p>For founders juggling product, fundraising, and growth. I help you think through what matters most right now, and execute on it with limited resources.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="about">
+  <p class="section-label">About</p>
+  <div class="bio-block">
+    <div class="bio-left">
+      <h2>I've been on both sides.</h2>
+      <p>I've seen partnerships from the inside — what kills deals and what makes them stick. I've worked with founders at the moment they're trying to figure out their go-to-market, and I know exactly what that pressure feels like.</p>
+      <p>Most early-stage founders have good instincts but limited networks and bandwidth. Partnerships are often a nice-to-have in their head, but they're actually a critical lever for growth. My job is to help you see where partnerships fit in your story, and then execute on them.</p>
+      <p>I work best with founders who are past the "pure product" phase and starting to think about distribution. You don't need venture-scale ambitions — just the hunger to build something real and the willingness to do the work.</p>
+    </div>
+    <div class="bio-right">
+      <span class="pub-label">Experience</span>
+      <ul class="pub-list" aria-label="Experience">
+        <li>Partnership Strategy</li>
+        <li>Go-to-Market Planning</li>
+        <li>Early-Stage Growth</li>
+        <li>Business Development</li>
+        <li>Founder Advisory</li>
+      </ul>
+      <div class="credentials">
+        <span>Background</span>
+        <p>Partnerships &nbsp;·&nbsp; GTM &nbsp;·&nbsp; Startup Growth &nbsp;·&nbsp; Business Strategy</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="consult">
+  <p class="section-label">Work Together</p>
+  <div class="consult-block">
+    <div>
+      <h2>You need clarity<br>before you need execution.</h2>
+      <p>A focused session to map your partnership strategy, GTM roadmap, or growth bottleneck. You'll walk away with a framework you can execute on immediately.</p>
+      <ul class="consult-list">
+        <li>Map your ideal partner profile and identify warm intros</li>
+        <li>Clarify your GTM bottleneck and the lever that moves it</li>
+        <li>Build a 90-day execution roadmap you can start this week</li>
+      </ul>
+      <a href="#contact" class="btn-primary">Book a session</a>
+    </div>
+    <div class="consult-detail">
+      <h4>What's included</h4>
+      <p>60-90 minute call on your preferred platform.</p>
+      <p>Custom summary with analysis and next steps.</p>
+      <p>Actionable recommendations you can execute immediately.</p>
+      <p style="margin-top: 1.5rem; font-style: italic; font-size: 0.85rem; color: var(--mid);">Best for founders and early-stage teams who need a second opinion or a strategic partner.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section id="contact">
+  <p class="section-label">Contact</p>
+  <div style="max-width: 600px;">
+    <p style="font-size: 1.05rem; margin-bottom: 2.5rem; color: var(--mid); font-style: italic;">Let's talk about what you're building and where partnerships fit into your story.</p>
+
+    <form id="contact-form" name="contact" method="POST" netlify netlify-honeypot="bot-field" style="margin-bottom: 2.5rem;">
+      <input type="hidden" name="form-name" value="contact">
+      <p style="display:none;"><input name="bot-field"></p>
+
+      <div style="margin-bottom: 1.5rem;">
+        <label style="font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rust); display: block; margin-bottom: 0.6rem;">Name</label>
+        <input type="text" name="name" required="" style="width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--ink); padding: 0.6rem 0; font-family: 'Libre Baskerville', serif; font-size: 0.95rem; color: var(--ink); outline: none;">
+      </div>
+
+      <div style="margin-bottom: 1.5rem;">
+        <label style="font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rust); display: block; margin-bottom: 0.6rem;">Email</label>
+        <input type="email" name="email" required="" style="width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--ink); padding: 0.6rem 0; font-family: 'Libre Baskerville', serif; font-size: 0.95rem; color: var(--ink); outline: none;">
+      </div>
+
+      <div style="margin-bottom: 1.5rem;">
+        <label style="font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--rust); display: block; margin-bottom: 0.6rem;">Message</label>
+        <textarea name="message" required="" rows="5" style="width: 100%; background: transparent; border: none; border-bottom: 1px solid var(--ink); padding: 0.6rem 0; font-family: 'Libre Baskerville', serif; font-size: 0.95rem; color: var(--ink); outline: none; resize: none;"></textarea>
+      </div>
+
+      <button type="submit" style="font-family: 'DM Mono', monospace; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase; background: var(--ink); color: var(--paper); border: none; padding: 0.85rem 2rem; cursor: pointer; transition: background 0.2s;" onmouseover="this.style.background='#b84b2f'" onmouseout="this.style.background='#0f0e0d'">Send</button>
+    </form>
+
+    <div id="form-success" style="display:none; padding: 2rem 0; border-top: 1px solid var(--ink);">
+      <p style="font-family: 'DM Mono', monospace; font-size: 0.78rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rust);">Message sent.</p>
+      <p style="font-size: 0.92rem; color: var(--mid); margin-top: 0.6rem; font-style: italic;">I'll be in touch soon.</p>
+    </div>
+
+    <div style="border-top: 1px solid var(--pale); padding-top: 1.5rem;">
+      <p style="font-family: 'DM Mono', monospace; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mid);">Or email directly</p>
+      <p style="font-size: 0.95rem; margin-top: 0.5rem;"><a href="mailto:ashley@ashleybraz.com" style="color: var(--ink); text-decoration: none; border-bottom: 1px solid var(--pale); padding-bottom: 2px;">ashley@ashleybraz.com</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Ashley Braz © 2026 &nbsp;/&nbsp; Toronto</p>
+  <div style="display:flex; gap: 2rem; flex-wrap: wrap;">
+    <a href="#contact">Get in touch</a>
+    <a href="mailto:ashley@ashleybraz.com">ashley@ashleybraz.com</a>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('section, footer').forEach(el => observer.observe(el));
+
+  const form = document.getElementById('contact-form');
+  if (form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        await fetch('/', { method: 'POST', body: data });
+        form.style.display = 'none';
+        document.getElementById('form-success').style.display = 'block';
+      } catch(err) {
+        alert('Something went wrong. Please try again.');
+      }
+    });
+  }
+</script>
+
+</body></html>
