@@ -58,6 +58,9 @@
   .slide.warm { background: var(--warm-bg); }
   .slide.dark { background: linear-gradient(135deg, #1a1815 0%, #2a251f 100%); }
   .slide.intro { background-size: cover; background-position: center; background-attachment: fixed; }
+  @media (min-width: 1200px) {
+    .slide.intro { background-position: 100% center; background-size: 150%; }
+  }
 
   /* soft organic corner wash — replaces hard gradients */
   .slide::before {
@@ -120,6 +123,8 @@
   /* Topbar color transitions */
   .brand-mark { color: var(--ink); transition: color 0.3s ease; }
   .brand-mark.light { color: var(--cream); }
+  /* Hide topbar on slide 5 (Edge) */
+  .topbar.hidden { display: none; }
 
   h2 {
     font-family: var(--serif);
@@ -598,10 +603,17 @@
           dotBtns.forEach(function(d,i){ d.classList.toggle('active', i===idx); });
           // Update topbar brand-mark color for dark slides
           var brandMark = document.querySelector('.brand-mark');
+          var topbar = document.querySelector('.topbar');
           if(en.target.id === 'edge' || en.target.classList.contains('dark')){
             brandMark.classList.add('light');
           } else {
             brandMark.classList.remove('light');
+          }
+          // Hide topbar on slide 5 (edge), show on other slides
+          if(en.target.id === 'edge'){
+            topbar.classList.add('hidden');
+          } else {
+            topbar.classList.remove('hidden');
           }
         }
       });
@@ -616,12 +628,18 @@
     if(['ArrowUp','PageUp','ArrowLeft'].indexOf(e.key)>-1){ e.preventDefault(); slides[Math.max(current()-1,0)].scrollIntoView({behavior:'smooth'}); }
   });
   slides[0].classList.add('active'); reveal(slides[0]); dotBtns[0].classList.add('active');
-  // Initialize brand-mark color
+  // Initialize brand-mark color and topbar visibility
   var brandMark = document.querySelector('.brand-mark');
+  var topbar = document.querySelector('.topbar');
   if(slides[0].id === 'edge' || slides[0].classList.contains('dark')){
     brandMark.classList.add('light');
   } else {
     brandMark.classList.remove('light');
+  }
+  if(slides[0].id === 'edge'){
+    topbar.classList.add('hidden');
+  } else {
+    topbar.classList.remove('hidden');
   }
 })();
 </script>
