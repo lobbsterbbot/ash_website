@@ -236,31 +236,7 @@
   }
   .engine p { margin: 0; font-size: 1rem; color: var(--muted); line-height: 1.6; }
 
-  /* ===== PROOF / STATS (editorial oversized) ===== */
-  .stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 48px;
-    margin-top: 20px;
-  }
-  .stat .s-num {
-    font-family: var(--serif);
-    font-weight: 800;
-    font-size: clamp(3.4rem, 7vw, 5.6rem);
-    line-height: 0.95;
-    letter-spacing: -0.04em;
-    color: var(--copper);
-    margin-bottom: 16px;
-  }
-  .stat.sage .s-num { color: var(--sage-deep); }
-  .stat .s-line { width: 40px; height: 2px; background: var(--hair-copper); margin-bottom: 16px; }
-  .stat .s-label {
-    font-size: 0.95rem;
-    color: var(--brown);
-    font-weight: 500;
-    line-height: 1.4;
-    max-width: 220px;
-  }
+  /* ===== PROOF / STATS (editorial oversized) — REMOVED, using ledger instead ===== */
 
   /* ===== APPROACH (numbered ledger, no boxes) ===== */
   .ledger { margin-top: 20px; }
@@ -375,7 +351,7 @@
     .hero-meta { border-left: 0; border-top: 1px solid var(--hair-copper); padding-left: 0; padding-top: 26px; }
     .engines { grid-template-columns: 1fr; }
     .engine, .engine:nth-child(odd), .engine:nth-child(even) { padding: 30px 0; border-left: 0; }
-    .stats { grid-template-columns: 1fr; gap: 40px; }
+    /* ledger responsive handled in ledger-row media query below */
     .ledger-row { grid-template-columns: 50px 1fr; gap: 16px 20px; }
     .ledger-row p { grid-column: 2; }
     .brands { grid-template-columns: repeat(2, 1fr); }
@@ -454,24 +430,29 @@
 <section class="slide warm" id="proof">
   <div class="band">
     <div class="kicker sage in" data-an>The proof</div>
-    <h2 class="in" data-an>Numbers, not <em>presentations.</em></h2>
-    <p class="lede in" data-an>Nineteen years across retail, travel, and tech — building the relationships and programs that connect brands to customers in ways that compound.</p>
+    <h2 class="in" data-an>Proof of execution across <em>retail, travel, ecommerce, and startups.</em></h2>
+    <p class="lede in" data-an>Same brand caliber. Different contexts. Proven repeatability.</p>
 
-    <div class="stats in" data-an>
-      <div class="stat">
-        <div class="s-num">1M</div>
-        <div class="s-line"></div>
-        <div class="s-label">Loyalty members built in 18 months at Mastermind Toys</div>
+    <div class="ledger in" data-an>
+      <div class="ledger-row">
+        <div class="l-num">01</div>
+        <h4>Loyalty + Partnerships at Scale</h4>
+        <p><strong>Mastermind Toys.</strong> Built 1M-member loyalty program and $5M partnership portfolio simultaneously in 18 months. Owned both functions. Proved she can run complex, cross-functional operations at scale. Turned partnerships from zero to core growth engine.</p>
       </div>
-      <div class="stat">
-        <div class="s-num">$5M</div>
-        <div class="s-line"></div>
-        <div class="s-label">In strategic partnerships built from zero</div>
+      <div class="ledger-row">
+        <div class="l-num">02</div>
+        <h4>Strategy &amp; Execution at Global Scale</h4>
+        <p><strong>Expedia Group.</strong> Developed strategy and executed multi-million dollar marketing campaigns for Air Canada, WestJet, Disney, and tourism boards. Managed digital media strategy for global brands. Proved she can move revenue at tier-one level and scale across geographies.</p>
       </div>
-      <div class="stat sage">
-        <div class="s-num">19</div>
-        <div class="s-line"></div>
-        <div class="s-label">Years leading marketing, partnerships &amp; growth</div>
+      <div class="ledger-row">
+        <div class="l-num">03</div>
+        <h4>Strategic Brand Leadership</h4>
+        <p><strong>Designer Shoe Warehouse (DSW).</strong> Led brand partnerships and strategic activations with Adidas, Puma, Birkenstock, Skechers, UGG, and others. Sourced, negotiated, and managed ongoing relationships with top-tier brands. Proved she can maintain and grow strategic partnerships at retail scale.</p>
+      </div>
+      <div class="ledger-row">
+        <div class="l-num">04</div>
+        <h4>Founder + Operator</h4>
+        <p><strong>Couple.co &amp; ALDAY.</strong> Built customer experience, sales, and partnerships from zero at a lab-grown diamond startup (high-margin, competitive space). Understand founder constraints. Know how to move fast in uncertainty. Proved she can execute across all levers when there's no safety net.</p>
       </div>
     </div>
   </div>
