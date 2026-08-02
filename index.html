@@ -126,24 +126,41 @@
   /* Hide topbar on slide 5 (Edge) */
   .topbar.hidden { display: none; }
   
-  /* Fade in + zoom animation for Slide 1 text */
-  @keyframes fadeInZoom {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
+  /* ===== SLIDE 1 INTRO CHOREOGRAPHY ===== */
+  /* Overlay: two stacked layers, animate opacity only (hardware-accelerated, no jank) */
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: rgba(245, 239, 231, 0.95);
+    opacity: 0.3;
+    animation: overlaySettle 0.9s cubic-bezier(.4,0,.2,1) 0.2s forwards;
+    will-change: opacity;
+    backface-visibility: hidden;
   }
-  
-  /* Overlay fade animation for Slide 1 */
-  @keyframes overlayFadeIn {
-    from { background: rgba(245, 239, 231, 0.3); }
-    to { background: rgba(245, 239, 231, 0.95); }
+  @keyframes overlaySettle {
+    from { opacity: 0.3; }
+    to   { opacity: 1; }
   }
-  .overlay-fade {
-    animation: overlayFadeIn 0.5s ease-out forwards;
-  }
-  #hero .in {
+
+  /* Hero text: single smooth fade + gentle rise, coordinated after overlay settles */
+  #hero [data-an] {
     opacity: 0;
-    animation: fadeInZoom 0.5s ease-out forwards;
-    animation-delay: 1s;
+    transform: translateY(14px);
+    transition: none;
+  }
+  #hero.active [data-an] {
+    animation: heroReveal 0.8s cubic-bezier(.2,.7,.2,1) 0.9s forwards;
+    will-change: opacity, transform;
+    backface-visibility: hidden;
+  }
+  @keyframes heroReveal {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-overlay { animation: none; opacity: 1; }
+    #hero [data-an] { animation: none; opacity: 1; transform: none; }
   }
 
   h2 {
@@ -376,6 +393,8 @@
   /* ===== ANIMATIONS ===== */
   [data-an] { opacity: 0; transform: translateY(18px); transition: opacity 0.7s cubic-bezier(.2,.7,.2,1), transform 0.7s cubic-bezier(.2,.7,.2,1); }
   .slide.active [data-an].in { opacity: 1; transform: none; }
+  /* Hero uses its own choreographed reveal (see SLIDE 1 INTRO) — exempt from global transition */
+  #hero [data-an] { transition: none !important; }
 
   /* ===== RESPONSIVE ===== */
   @media (max-width: 900px) {
@@ -405,7 +424,7 @@
 
 <!-- ===== 1 · HERO ===== -->
 <section class="slide warm active" id="hero" style="background-image: url('ashley.jpg'); background-size: cover; background-position: center;">
-  <div class="overlay-fade" style="position: absolute; inset: 0; z-index: 0;"></div>
+  <div class="hero-overlay"></div>
   <div class="band" style="position: relative; z-index: 2;">
     <div class="hero-grid">
       <div>
