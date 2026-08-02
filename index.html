@@ -57,6 +57,7 @@
   .slide.pale { background: var(--pale-sage); }
   .slide.warm { background: var(--warm-bg); }
   .slide.dark { background: linear-gradient(135deg, #1a1815 0%, #2a251f 100%); }
+  .slide.intro { background-size: cover; background-position: center; background-attachment: fixed; }
 
   /* soft organic corner wash — replaces hard gradients */
   .slide::before {
@@ -371,8 +372,16 @@
 </div>
 <div class="dots" id="dots"></div>
 
-<!-- ===== 1 · HERO ===== -->
-<section class="slide warm active" id="hero">
+<!-- ===== 1 · INTRO ===== -->
+<section class="slide intro active" id="intro" style="background-image: url('ashley.jpg'); background-size: cover; background-position: center;">
+  <div style="position: absolute; inset: 0; background: rgba(26, 24, 21, 0.60); z-index: 1;"></div>
+  <div class="band" style="position: relative; z-index: 2; display: flex; align-items: center; justify-content: center; text-align: center;">
+    <h1 style="font-family: var(--serif); font-size: clamp(2.4rem, 6vw, 4.2rem); font-weight: 800; color: var(--cream); margin: 0; letter-spacing: -0.04em;">Ashley Braz<span style="display: block; font-size: 0.5em; font-weight: 500; margin-top: 12px;">Marketer</span></h1>
+  </div>
+</section>
+
+<!-- ===== 2 · HERO ===== -->
+<section class="slide warm" id="hero">
   <div class="band">
     <div class="hero-grid">
       <div>
@@ -402,7 +411,7 @@
   </div>
 </section>
 
-<!-- ===== 2 · THE WEDGE ===== -->
+<!-- ===== 3 · THE WEDGE ===== -->
 <section class="slide cream" id="wedge">
   <div class="band">
     <div class="kicker in" data-an>What I do</div>
@@ -429,7 +438,7 @@
   </div>
 </section>
 
-<!-- ===== 3 · PROOF ===== -->
+<!-- ===== 4 · PROOF ===== -->
 <section class="slide warm" id="proof">
   <div class="band">
     <div class="kicker sage in" data-an>The proof</div>
@@ -461,7 +470,7 @@
   </div>
 </section>
 
-<!-- ===== 4 · APPROACH ===== -->
+<!-- ===== 5 · APPROACH ===== -->
 <section class="slide pale" id="approach">
   <div class="band">
     <div class="kicker in" data-an>How I work</div>
@@ -493,7 +502,7 @@
   </div>
 </section>
 
-<!-- ===== 5 · THE EDGE (AGENTIC ERA) ===== -->
+<!-- ===== 6 · THE EDGE (AGENTIC ERA) ===== -->
 <section class="slide dark" id="edge">
   <div class="band">
     <div class="kicker in" data-an style="color: var(--copper-light);">The edge</div>
@@ -520,7 +529,7 @@
   </div>
 </section>
 
-<!-- ===== 6 · BRANDS ===== -->
+<!-- ===== 7 · BRANDS ===== -->
 <section class="slide cream" id="brands">
   <div class="band">
     <div class="brand-intro">
@@ -546,7 +555,7 @@
   </div>
 </section>
 
-<!-- ===== 6 · CONTACT ===== -->
+<!-- ===== 8 · CONTACT ===== -->
 <section class="slide warm" id="contact">
   <div class="band">
     <div class="contact-band">
