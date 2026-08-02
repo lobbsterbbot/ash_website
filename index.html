@@ -126,10 +126,19 @@
   /* Hide topbar on slide 5 (Edge) */
   .topbar.hidden { display: none; }
   
-  /* Fade in + zoom animation for Slide 1 */
+  /* Fade in + zoom animation for Slide 1 text */
   @keyframes fadeInZoom {
     from { opacity: 0; transform: scale(0.95); }
     to { opacity: 1; transform: scale(1); }
+  }
+  
+  /* Overlay fade animation for Slide 1 */
+  @keyframes overlayFadeIn {
+    from { background: rgba(245, 239, 231, 0.3); }
+    to { background: rgba(245, 239, 231, 0.95); }
+  }
+  .overlay-fade {
+    animation: overlayFadeIn 1s ease-out forwards;
   }
   #hero .in {
     opacity: 0;
@@ -396,7 +405,7 @@
 
 <!-- ===== 1 · HERO ===== -->
 <section class="slide warm active" id="hero" style="background-image: url('ashley.jpg'); background-size: cover; background-position: center;">
-  <div style="position: absolute; inset: 0; background: rgba(245, 239, 231, 0.95); z-index: 0;"></div>
+  <div class="overlay-fade" style="position: absolute; inset: 0; z-index: 0;"></div>
   <div class="band" style="position: relative; z-index: 2;">
     <div class="hero-grid">
       <div>
