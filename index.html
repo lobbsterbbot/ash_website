@@ -13,6 +13,7 @@
     --cream: #F5EFE7;
     --warm-bg: #FBF8F3;
     --copper: #A8704F;
+    --copper-light: #D4A574;
     --copper-deep: #8A5A3D;
     --sage: #8BA593;
     --sage-deep: #6E8A76;
@@ -20,6 +21,7 @@
     --pale-sage: #EAF0EB;
     --ink: #33302C;
     --muted: rgba(51, 48, 44, 0.62);
+    --cream-muted: rgba(245, 239, 231, 0.72);
     --hair: rgba(51, 48, 44, 0.14);
     --hair-copper: rgba(168, 112, 79, 0.30);
     --serif: 'Archivo', -apple-system, sans-serif;
@@ -54,6 +56,7 @@
   .slide.cream { background: var(--cream); }
   .slide.pale { background: var(--pale-sage); }
   .slide.warm { background: var(--warm-bg); }
+  .slide.dark { background: linear-gradient(135deg, #1a1815 0%, #2a251f 100%); }
 
   /* soft organic corner wash — replaces hard gradients */
   .slide::before {
@@ -69,6 +72,7 @@
   .slide.warm::before  { top: -25vw; right: -20vw; background: radial-gradient(circle, rgba(168,112,79,0.10), transparent 70%); }
   .slide.cream::before { bottom: -25vw; left: -20vw; background: radial-gradient(circle, rgba(139,165,147,0.14), transparent 70%); }
   .slide.pale::before  { top: -20vw; left: -15vw; background: radial-gradient(circle, rgba(168,112,79,0.08), transparent 70%); }
+  .slide.dark::before { top: -20vw; right: -15vw; background: radial-gradient(circle, rgba(212,165,116,0.15), transparent 70%); }
 
   .band {
     max-width: 1180px;
@@ -98,6 +102,7 @@
     display: inline-block;
   }
   .kicker.sage { color: var(--sage-deep); }
+  .slide.dark .kicker::before { background: var(--copper-light); }
   .kicker.sage::before { background: var(--sage-deep); }
 
   h1 {
@@ -352,6 +357,7 @@
     .ledger-row { grid-template-columns: 50px 1fr; gap: 16px 20px; }
     .ledger-row p { grid-column: 2; }
     .brands { grid-template-columns: repeat(2, 1fr); }
+    .slide.dark { background: linear-gradient(135deg, #1a1815 0%, #2a251f 100%); }
     .dots { right: 14px; }
     .topbar { padding: 0 7vw; }
   }
@@ -487,7 +493,34 @@
   </div>
 </section>
 
-<!-- ===== 5 · BRANDS ===== -->
+<!-- ===== 5 · THE EDGE (AGENTIC ERA) ===== -->
+<section class="slide dark" id="edge">
+  <div class="band">
+    <div class="kicker in" data-an style="color: var(--copper-light);">The edge</div>
+    <h2 class="in" data-an style="color: var(--cream);">Built for the agentic era. <em>Moving at the speed of AI.</em></h2>
+    <p class="lede in" data-an style="color: var(--cream-muted);">Technology moves fast. Most marketers ask ChatGPT questions and call it innovation. I'm different. I'm constantly implementing agentic workflows — systems where AI agents work together, orchestrated to solve specific business problems. Not prompting. Implementation. This means I move at the speed of AI, so your strategy doesn't get left behind.</p>
+
+    <div class="engines in" data-an>
+      <div class="engine">
+        <div class="e-num" style="color: var(--copper-light);">01</div>
+        <h3 style="color: var(--cream);">Agentic ≠ Prompting</h3>
+        <p style="color: var(--cream-muted);">You don't hire consultants to know ChatGPT. You hire them to know how to build systems where AI works <em>for</em> you. That's orchestration. I implement it, not just discuss it.</p>
+      </div>
+      <div class="engine">
+        <div class="e-num" style="color: var(--copper-light);">02</div>
+        <h3 style="color: var(--cream);">Speed Is the Weapon</h3>
+        <p style="color: var(--cream-muted);">Traditional strategy takes months to execute. Agentic systems execute in weeks. I operate at that velocity, so your competitive advantage doesn't erode waiting for the next cycle.</p>
+      </div>
+      <div class="engine">
+        <div class="e-num" style="color: var(--copper-light);">03</div>
+        <h3 style="color: var(--cream);">Staying Ahead</h3>
+        <p style="color: var(--cream-muted);">Technology is the new table stakes. Brands that adapt fastest win. I don't just use emerging tools — I understand how to implement them in ways that move revenue. That's your edge.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6 · BRANDS ===== -->
 <section class="slide cream" id="brands">
   <div class="band">
     <div class="brand-intro">
