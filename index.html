@@ -117,6 +117,9 @@
   }
   h1 em { font-style: normal; color: var(--copper); font-weight: 800; }
   #intro h1 { color: var(--cream); text-shadow: 0 2px 8px rgba(0,0,0,0.4); }
+  /* Topbar color transitions */
+  .brand-mark { color: var(--ink); transition: color 0.3s ease; }
+  .brand-mark.light { color: var(--cream); }
 
   h2 {
     font-family: var(--serif);
@@ -600,6 +603,13 @@
           en.target.classList.add('active');
           reveal(en.target);
           dotBtns.forEach(function(d,i){ d.classList.toggle('active', i===idx); });
+          // Update topbar brand-mark color for dark slides
+          var brandMark = document.querySelector('.brand-mark');
+          if(en.target.id === 'edge' || en.target.classList.contains('dark')){
+            brandMark.classList.add('light');
+          } else {
+            brandMark.classList.remove('light');
+          }
         }
       });
     }, {threshold:[0.55]});
@@ -613,6 +623,13 @@
     if(['ArrowUp','PageUp','ArrowLeft'].indexOf(e.key)>-1){ e.preventDefault(); slides[Math.max(current()-1,0)].scrollIntoView({behavior:'smooth'}); }
   });
   slides[0].classList.add('active'); reveal(slides[0]); dotBtns[0].classList.add('active');
+  // Initialize brand-mark color
+  var brandMark = document.querySelector('.brand-mark');
+  if(slides[0].id === 'edge' || slides[0].classList.contains('dark')){
+    brandMark.classList.add('light');
+  } else {
+    brandMark.classList.remove('light');
+  }
 })();
 </script>
 
