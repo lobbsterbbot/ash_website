@@ -90,6 +90,7 @@
     align-items: center;
     gap: 12px;
     margin-bottom: 28px;
+    justify-content: center;
   }
   .kicker::before {
     content: '';
@@ -135,16 +136,25 @@
   /* ===== HERO ===== */
   .hero-grid {
     display: grid;
-    grid-template-columns: 1.4fr 1fr;
+    grid-template-columns: 1fr;
     gap: 64px;
     align-items: center;
+    text-align: center;
+  }
+  .hero-grid > div:first-child {
+    max-width: 900px;
+    margin: 0 auto;
   }
   .hero-meta {
-    border-left: 1px solid var(--hair-copper);
-    padding-left: 28px;
+    border-left: 0;
+    border-top: 1px solid var(--hair-copper);
+    padding-left: 0;
+    padding-top: 40px;
     display: flex;
-    flex-direction: column;
-    gap: 26px;
+    flex-direction: row;
+    gap: 60px;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .hero-meta .meta-item .mlabel {
     font-size: 11px;
@@ -164,7 +174,7 @@
   }
 
   /* ===== BUTTONS ===== */
-  .btn-row { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+  .btn-row { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; justify-content: center; }
   .btn {
     font-family: var(--sans);
     font-size: 14px;
@@ -394,8 +404,8 @@
     <div class="hero-grid">
       <div>
         <div class="kicker in" data-an>Growth &amp; Partnerships Marketing Leader</div>
-        <h1 class="in" data-an>I build the two engines most teams <em>can't:</em> partnerships &amp; loyalty.</h1>
-        <p class="lede in" data-an>Senior marketing leadership, fractional. I've grown a loyalty program to <strong>1M members in 18 months</strong> and built a <strong>$5M partnerships portfolio</strong> from zero — at Expedia, DSW, and Mastermind Toys scale.</p>
+        <h1 class="in" data-an>Growth marketing leader. I build multi-million dollar partnerships and campaigns, design customer experiences that drive retention, and optimize marketing flows with AI. Expedia. Mastermind Toys. Designer Shoe Warehouse (DSW).</h1>
+        <p class="lede in" data-an>Built 1M-member loyalty program and $5M partnership portfolio simultaneously — both in 18 months at Mastermind Toys. Executed multi-million dollar campaigns for Air Canada, WestJet, Disney at Expedia. Specialist in growth marketing, partnerships, and customer experience. AI-optimized.</p>
         <div class="btn-row in" data-an>
           <a href="#contact" class="btn btn-primary">Work with me <span class="arrow">&rarr;</span></a>
           <a href="#approach" class="btn btn-ghost">How I work</a>
