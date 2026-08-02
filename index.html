@@ -90,7 +90,6 @@
     align-items: center;
     gap: 12px;
     margin-bottom: 28px;
-    justify-content: center;
   }
   .kicker::before {
     content: '';
@@ -136,25 +135,16 @@
   /* ===== HERO ===== */
   .hero-grid {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1.4fr 1fr;
     gap: 64px;
     align-items: center;
-    text-align: center;
-  }
-  .hero-grid > div:first-child {
-    max-width: 900px;
-    margin: 0 auto;
   }
   .hero-meta {
-    border-left: 0;
-    border-top: 1px solid var(--hair-copper);
-    padding-left: 0;
-    padding-top: 40px;
+    border-left: 1px solid var(--hair-copper);
+    padding-left: 28px;
     display: flex;
-    flex-direction: row;
-    gap: 60px;
-    justify-content: center;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 26px;
   }
   .hero-meta .meta-item .mlabel {
     font-size: 11px;
@@ -174,7 +164,7 @@
   }
 
   /* ===== BUTTONS ===== */
-  .btn-row { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; justify-content: center; }
+  .btn-row { display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
   .btn {
     font-family: var(--sans);
     font-size: 14px;
