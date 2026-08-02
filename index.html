@@ -126,20 +126,14 @@
   /* Hide topbar on slide 5 (Edge) */
   .topbar.hidden { display: none; }
   
-  /* Fade in animation for Slide 1 */
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  /* Fade in + zoom animation for Slide 1 */
+  @keyframes fadeInZoom {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
   }
   #hero .in {
-    animation: fadeIn 2s ease-in-out forwards;
+    animation: fadeInZoom 2s ease-out forwards;
   }
-  #hero .in:nth-child(1) { animation-delay: 0ms; }
-  #hero .in:nth-child(2) { animation-delay: 200ms; }
-  #hero .in:nth-child(3) { animation-delay: 400ms; }
-  #hero .in:nth-child(4) { animation-delay: 600ms; }
-  #hero .in:nth-child(5) { animation-delay: 800ms; }
-  #hero .in:nth-child(n+6) { animation-delay: 1000ms; }
 
   h2 {
     font-family: var(--serif);
